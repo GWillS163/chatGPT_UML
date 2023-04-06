@@ -2,9 +2,24 @@
 <html lang="">
 <head>
 	<title>chatGPT-based UML Diagram Generator Demo</title>
+    <style>
+        @keyframes light {
+    from {
+       box-shadow:0px 0px 4px #f00;
+    }
+    to {
+      box-shadow:0px 0px 16px #f00;
+    }
+}
+.light {
+  width: 100px;
+  height: 100px;
+  animation: light 2s ease-in-out infinite alternate;
+}
+    </style>
 </head>
 <body>
-    <h1>chatGPT-based UML Diagram Generator Demo</h1>
+    <h1>AI-based UML Diagram Generator Demo</h1>
     <p>{{ response }}</p>
 	<!-- 聊天框 -->
 	<div style="float:left; width: 48%; ">
@@ -13,7 +28,7 @@
 		<form method="POST" action="/chat" >
             <div>
             <label>
-                <textarea  id="message" name="message" placeholder="描述你的UML需求, 越详细越精确" style="width:100%; font-size:30px"></textarea>
+                <textarea class="light"  id="message" name="message" placeholder="描述你的UML需求, 越详细越精确" style="width:100%; font-size:30px"></textarea>
             </label>
                 <button id="chat-button" style="width:30%; height:100%" >发送</button>
             </div>
@@ -41,7 +56,10 @@
 		<h3>UML图展示</h3>
         <p> {{ image_data }}</p>
 		{% if not index %}
-		    <img src="static/showedCode.png" alt="UML图片">
+		    <img src="static/showedCode.png" style="width:110%" alt="UML图片">
+{#            q: 如何让这个图片大小固定在这里#}
+{#            a: 用div包裹，设置div的高度，然后设置overflow: auto;#}
+        {% else %}
 {#		<img src="{{ image_data }}" alt="UML图片">#}
 		{% endif %}
 
@@ -51,6 +69,7 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script>
+
   // 在页面加载完成后，添加点击事件监听器
   window.onload = function() {
     var button = document.getElementById('chat-button');

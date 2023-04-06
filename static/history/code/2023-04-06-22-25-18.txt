@@ -1,0 +1,30 @@
+以下是对应的UML代码描述和示例：
+
+```plantuml
+@startuml
+class Teacher {
+  +姓名: string
+  +年龄: int
+  +工号: string
+  -科目: string
+  -班级: string
+  +上课(): void
+  +点名(): void
+}
+@enduml
+```
+
+* `class` 关键字用于定义类 `Teacher`；
+* `{}` 用于定义类的属性和方法；
+* `+` 表示公有属性或方法；
+* `-` 表示私有属性或方法；
+* `:` 用于定义属性的数据类型；
+* `void` 表示方法的返回类型为空；
+* 方法名后的 `()` 表示方法的参数列表为空；
+* 方法名后可以跟着参数列表，例如 `+上课(课程名称: string): void`。
+
+其中类图包含的属性有姓名、年龄、工号、科目、班级，其中姓名、年龄和工号为公有属性，科目和班级为私有属性。包含了两个公有方法，`上课` 和 `点名`。注意，UML只是图表，没有代码实现的逻辑。
+
+UML代码示例输出格式如下：
+
+![Teacher类图](https://www.plantuml.com/plantuml/png/ZL9DNyCm4BtxAz0ZNK8Cv11uSofxSsuF1rmWcJA8o80XF9o4z4D4yHwQ1ffONgHKtzOsQYEYYwiSVfZsCbP8aaJX9On_UGTcccgPZZYdzh8Fq1nCQan0ZjJuwOe8RJ0NqdLymTcTJbLdY8Yv3GJHmSxahZM1mW8YYvNg9pOz4H4yL4Qw8pusvBtclJ40rKBwmh87iQHS5ip5GUPOX7V_Jb5Dik1)

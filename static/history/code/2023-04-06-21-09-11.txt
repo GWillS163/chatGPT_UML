@@ -1,0 +1,34 @@
+```
+@startuml
+title Login and Register Module
+
+interface IUser {
+  +register(username: string, password: string): boolean
+  +login(username: string, password: string): boolean
+  +logout(): void
+  +getUser(): string
+}
+
+class UserImpl {
+  +username: string
+  +password: string
+  +loggedIn: boolean
+  +constructor(username: string, password: string)
+  +register(username: string, password: string): boolean
+  +login(username: string, password: string): boolean
+  +logout(): void
+  +getUser(): string
+}
+
+class LoginHelper {
+  +loggedin: boolean
+  +currentUser: string
+  +login(username: string, password: string): boolean
+  +logout(): void
+  +promptRegister(): void
+}
+
+IUser <|.. UserImpl
+LoginHelper --> IUser
+@enduml
+```

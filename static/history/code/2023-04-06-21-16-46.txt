@@ -1,0 +1,49 @@
+以下是需求类图的UML代码：
+
+```plantuml
+@startuml
+title 需求类图Demo
+
+class 需求 {
+  -id: int
+  -title: string
+  -description: string
+  -priority: int
+  -status: string
+  +需求(id:int, title:string, description:string, priority:int, status:string)
+  +getId():int
+  +getTitle():string
+  +getDescription():string
+  +getPriority():int
+  +setStatus(status:string):void
+  +getStatus():string
+}
+
+class 产品 {
+  -id: int
+  -name: string
+  -requirements: list[需求]
+  +产品(id:int, name:string)
+  +getId():int
+  +getName():string
+  +addRequirement(requirement:需求):void
+  +getRequirements():list[需求]
+}
+
+class 组织 {
+  -id: int
+  -name: string
+  -products: list[产品]
+  +组织(id:int, name:string)
+  +getId():int
+  +getName():string
+  +addProduct(product:产品):void
+  +getProducts():list[产品]
+}
+
+需求 -* 产品
+产品 -* 组织
+@enduml
+```
+
+这个类图描述了一个系统中的三个基本类，需求(Requirement)、产品(Product)、组织(Organization)。其中，每个需求都与一个产品相关联，并具有ID、标题、描述、优先级和状态等属性，以及获取和设置状态的方法。每个产品可以包含多个需求，并与一个组织(Institution)相关联。组织可以有多个产品，并包含基本的ID和名称属性，以及添加和获取产品的方法。这个类图展示了需求是如何在产品和组织之间进行组织的，并描述了这些类之间的基本关系。
