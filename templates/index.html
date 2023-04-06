@@ -25,10 +25,14 @@
 	</div>
 
 	<!-- 文本展示框 -->
-        <div style="  height: 68%;  border: solid grey 2px;">
+        <div style="  height: 68%;  border: solid grey 2px;overflow: auto;">
 
             <label for="code"><h3>代码展示</h3></label>
-            <textarea id="code" name="code" placeholder="代码展示" style="width:100%; height:100%; font-size:30px">{{ umlCode }}</textarea>
+            <textarea id="code" name="code" placeholder="代码展示"
+                      style="width:100%; height:250px;  font-size:10px">{{ umlCode }}</textarea>
+{#          q: 如何设置textarea的高度， 固定下来？  #}
+{#          a: 用div包裹，设置div的高度，然后设置overflow: auto;#}
+{#            #}
         </div>
 	</div>
 

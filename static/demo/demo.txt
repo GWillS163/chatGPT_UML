@@ -1,0 +1,12 @@
+@startuml
+
+
+scale 2.0
+title My AWS Architecture
+...
+
+Alice -> Bob: test
+教师 -> Bob: 返回
+教师 <- Bob: 返回
+Alice <- Bob: return
+@enduml
