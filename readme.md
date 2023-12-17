@@ -1,22 +1,22 @@
 # Intro
-±¾ÏîÄ¿ÊÇAI»­Í¼µÄDemoÑİÊ¾£¬Ö÷ÒªÊÇÊ¹ÓÃopenAIÊä³öUMLÓï·¨£¬+ PlantUML½øĞĞÊµÏÖ»­Í¼£¬ flask¸ºÔğweb·şÎñ¡£
-Ä¿Ç°ÒÑÍ£Ö¹¸üĞÂ±¾ÏîÄ¿£¬Ö÷ÒªÊÇÓÉÓÚFlaskµÄÇáÁ¿¼¶¿ò¼Ü£¬ÎŞ·¨Ö§³Ö´óÁ¿µÄ²¢·¢ÇëÇó£¬ËùÒÔ±¾ÏîÄ¿ÒÑ¾­ÎŞ·¨Ê¹ÓÃ¡£
-Ä¿Ç°ÕıÔÚÊ¹ÓÃJava SpringÖØÏÖ±¾ÏîÄ¿£¬ºóĞø¿ÉÄÜ»á¸üĞÂĞÂµÄÏîÄ¿µØÖ·¡£
+æœ¬é¡¹ç›®æ˜¯AIç”»å›¾çš„Demoæ¼”ç¤ºï¼Œä¸»è¦æ˜¯ä½¿ç”¨openAIè¾“å‡ºUMLè¯­æ³•ï¼Œ+ PlantUMLè¿›è¡Œå®ç°ç”»å›¾ï¼Œ flaskè´Ÿè´£webæœåŠ¡ã€‚
+ç›®å‰å·²åœæ­¢æ›´æ–°æœ¬é¡¹ç›®ï¼Œä¸»è¦æ˜¯ç”±äºFlaskçš„è½»é‡çº§æ¡†æ¶ï¼Œæ— æ³•æ”¯æŒå¤§é‡çš„å¹¶å‘è¯·æ±‚ï¼Œ**æ‰€ä»¥æœ¬é¡¹ç›®ä»…ä¾›æ¼”ç¤ºï¼**ã€‚
+ç›®å‰æ­£åœ¨ä½¿ç”¨Java Springé‡ç°æœ¬é¡¹ç›®ï¼Œåç»­å¯èƒ½ä¼šæ›´æ–°æ–°çš„é¡¹ç›®åœ°å€ã€‚
 
 ![img.png](templates/img.png)
 ![img_1.png](templates/4ceadb8d120aefadeb4b4acc9565211.png)
 
 # Usage
-µ±ÓÃ»§ÊäÈëÒ»¶ÎÎÄ×Ö£¬µã»÷Ìá½»ºó£¬»áµ÷ÓÃopenAIµÄAPI£¬·µ»ØÒ»¶ÎUMLÓï·¨£¬È»ºó½«UMLÓï·¨´«µİ¸øPlantUML£¬Éú³ÉÍ¼Æ¬£¬×îºó½«Í¼Æ¬Õ¹Ê¾ÔÚÒ³ÃæÉÏ¡£
+å½“ç”¨æˆ·è¾“å…¥ä¸€æ®µæ–‡å­—ï¼Œç‚¹å‡»æäº¤åï¼Œä¼šè°ƒç”¨openAIçš„APIï¼Œè¿”å›ä¸€æ®µUMLè¯­æ³•ï¼Œç„¶åå°†UMLè¯­æ³•ä¼ é€’ç»™PlantUMLï¼Œç”Ÿæˆå›¾ç‰‡ï¼Œæœ€åå°†å›¾ç‰‡å±•ç¤ºåœ¨é¡µé¢ä¸Šã€‚
 
 # Deployment
 - install python3.6
 - install flask
 - install openai
-- ÔÚinterface.pyÖĞĞŞ¸ÄopenaiµÄkey ¼´¿ÉÔËĞĞ¡£
+- åœ¨interface.pyä¸­ä¿®æ”¹openaiçš„key å³å¯è¿è¡Œã€‚
 
 # PlantUML Usage
-Ê¹ÓÃÒÔÏÂ´úÂë¼´¿É½«UMLÓï·¨×ª»»ÎªÍ¼Æ¬
+ä½¿ç”¨ä»¥ä¸‹ä»£ç å³å¯å°†UMLè¯­æ³•è½¬æ¢ä¸ºå›¾ç‰‡
 ```shell
 java -Djava.awt.headless=true -Dsun.java2d.uiScale=1.0 -Dsun.java2d.dpiaware=false -Dsun.java2d.noddraw=true -jar plantuml.jar dia2.txt
 -t png -o /path/to/output/dir
